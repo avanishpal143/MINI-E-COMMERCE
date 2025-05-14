@@ -1,74 +1,108 @@
 # Mini E-Commerce Platform
 
-A simple e-commerce web application with two main tabs — one for submitting products, and one for viewing submitted products, with a search feature.
+A modern, full-stack e-commerce web application for submitting and browsing products with real-time updates and search functionality.
+
+**Live Demo:** [https://mini-e-commerce-beta.vercel.app/](https://mini-e-commerce-beta.vercel.app/)  
+**GitHub:** [https://github.com/avanishpal143/MINI-E-COMMERCE](https://github.com/avanishpal143/MINI-E-COMMERCE)
+
+---
 
 ## Features
 
-- **Product Submission**: Add products with name, price, description, and optional image URL
-- **Products Display**: View all submitted products in a clean card layout
-- **Search Functionality**: Search for products by name or description
-- **Real-time Updates**: Newly added products appear immediately
+- **Product Submission:** Add products with name, price, description, and optional image URL.
+- **Product Listing:** Browse all submitted products in a clean, responsive card layout.
+- **Search:** Instantly search products by name or description.
+- **Real-Time Updates:** Newly added products appear immediately.
+- **Notifications:** User-friendly success and error notifications.
 
 ## Tech Stack
 
-- **Frontend**: React with TypeScript and Tailwind CSS
-- **Backend**: Node.js with Express
-- **Database**: PostgreSQL
-- **Other**: Axios for API requests, React Hot Toast for notifications
+- **Frontend:** React, TypeScript, Tailwind CSS
+- **Backend:** Node.js, Express
+- **Database:** PostgreSQL
+- **Other:** Axios (API requests), React Hot Toast (notifications)
 
-## Setup Instructions
+---
+
+## Getting Started
 
 ### Prerequisites
 
-- Node.js (v14+)
-- PostgreSQL
+- [Node.js](https://nodejs.org/) (v14+)
+- [PostgreSQL](https://www.postgresql.org/)
 
 ### Database Setup
 
-1. Create a PostgreSQL database named `mini_ecommerce`
-2. Default credentials in the `.env` file are:
-   - User: postgres
-   - Password: postgres
-   - Host: localhost
-   - Port: 5432
-3. Update the `.env` file if your database configuration differs
+1. Create a PostgreSQL database named `mini_ecommerce`.
+2. Default credentials (see `.env`):
+   - User: `postgres`
+   - Password: `postgres`
+   - Host: `localhost`
+   - Port: `5432`
+3. Update the `.env` file if your configuration differs.
+
+Example `.env`:
+```properties
+# Database connection
+DATABASE_URL=postgresql://postgres:postgres@localhost:5432/mini_ecommerce
+PORT=3001
+```
 
 ### Installation
 
-1. Clone the repository
-2. Install dependencies:
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/avanishpal143/MINI-E-COMMERCE.git
+   cd MINI-E-COMMERCE
    ```
+2. **Install dependencies:**
+   ```sh
    npm install
    ```
-3. Start the backend server:
-   ```
+3. **Start the backend server:**
+   ```sh
    npm run server
    ```
-4. In a new terminal, start the frontend development server:
-   ```
+4. **Start the frontend development server (in a new terminal):**
+   ```sh
    npm run dev
    ```
-5. Access the application at http://localhost:5173
+5. **Open the app:**  
+   Visit [http://localhost:5173](http://localhost:5173) in your browser.
+
+---
 
 ## API Endpoints
 
-- `GET /api/products` - Get all products
-- `POST /api/products` - Add a new product
-- `GET /api/products/search?query=keyword` - Search for products
+- `GET /products` — Retrieve all products
+- `POST /products` — Add a new product
+- `GET /products/search?query=keyword` — Search for products
+
+---
 
 ## Project Structure
 
 ```
-mini-ecommerce/
+MINI-E-COMMERCE/
 ├── public/             # Static files
-├── server/             # Backend server code
-│   └── index.js        # Express server
+├── server/             # Backend (Express)
+│   └── index.js
 ├── src/
 │   ├── components/     # React components
 │   ├── types/          # TypeScript types
-│   ├── App.tsx         # Main App component
-│   └── main.tsx        # Entry point
+│   ├── App.tsx
+│   └── main.tsx
 ├── .env                # Environment variables
-├── package.json        # Dependencies and scripts
-└── README.md           # Documentation
+├── package.json
+└── README.md
 ```
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+**Enjoy using the [Mini E-Commerce Platform](https://mini-e-commerce-beta.vercel.app/)!**
